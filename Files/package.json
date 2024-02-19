@@ -1,0 +1,22 @@
+{
+  "name": "gdsc-solution-challenge",
+  "version": "1.0.0",
+  "description": "LawyerUp - ChatBot",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SawhneySatvik/LawyerUp.git"
+  },
+  "author": "Satvik Sawhney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SawhneySatvik/LawyerUp/issues"
+  },
+  "homepage": "https://github.com/SawhneySatvik/LawyerUp#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1"
+  }
+}
