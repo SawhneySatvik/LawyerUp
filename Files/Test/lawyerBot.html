@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAWYER | Lawyer Up</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./lawyerStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div class="heading">
+            <h1>LAWYER <I>UP</I></h1>
+        </div>
+        <div class="menu">
+            <div class="menu-option">
+                <h4><a href="./index.html">Home</a></h4>
+            </div>
+            <div class="menu-option">
+                <h4><a href="./problemstatemen.html">Problem Solved</a></h4>
+            </div>
+            <div class="menu-option">
+                <h4><a href="./aboutus.html">About Us</a></h4>
+            </div>
+            <div class="menu-option">
+                <h4><a href="./subscription.html">Subscriptions</h4>
+            </div>
+            <button><a href="./lawyer.html">LAWYER</a></button>
+        </div>
+    </nav>
+
+    <div class="chatbot">
+        <header>
+            <h2>Lawyer <i>BOT</i></h2>
+        </header>
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there,<br>How can I help you today?</p>
+            </li>
+        </ul>
+        <div class="chat-input">
+            <textarea name="chat-input" placeholder="Enter your message..."></textarea>
+            <span id="send-btn" class="material-symbols-outlined">send</span>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="heading">
+                <h1>LAWYER <I>UP</I></h1>
+            </div>
+            <div class="mid-footdr">
+                <p>© Satvik Sawhney 2024</p>
+            </div>
+            <div class="links">
+                <a href=""><img src="./assets/icons/githubLogo.png" alt="github"></a>
+                <a href=""><img src="./assets/icons/instagram-icon.png" alt="instagram"></a>
+                <a href=""><img src="./assets/icons/linkedinLogo.png" alt="linkein"></a>
+                <a href=""><img src="./assets/icons/facebookLogo.png" alt="facebook"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+      <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+  
+        // Fetch your API_KEY
+        const API_KEY = "AIzaSyCiNqb40pjkgs_fPLuAce4pUv9LANN5Eqo";
+  
+        const model = "gemini-pro";
+        // Access your API key (see "Set up your API key" above)
+        const genAI = new GoogleGenerativeAI(API_KEY);
+  
+        // ...
+  
+        const chatInput = document.querySelector(".chat-input textarea");
+        const sendChatBtn = document.querySelector(".chat-input span");
+        const chatbox = document.querySelector(".chatbox");
+
+        let userMessage;
+        let responseAI;
+
+        
+
+        const createChatLi = (message, className)=>{
+            const chatLi = document.createElement("li");
+            chatLi.classList.add("chat",className);
+            let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<span class="material-symbols-outlined">smart_toy</span><p>${message}</p>`;
+            chatLi.innerHTML = chatContent;
+            return chatLi;
+        }
+
+        const handleChat = () => {
+            userMessage = chatInput.value.trim();
+            if(!userMessage) return;
+
+            chatbox.appendChild(createChatLi(userMessage,"outgoing"));
+
+            runChat();
+
+            setTimeout(()=>{
+                chatbox.appendChild(createChatLi(responseAI,"incoming"));
+            },100)
+        }
+
+        const {VertexAI} = require('@google-cloud/vertexai');
+
+// Initialize Vertex with your Cloud project and location
+const vertex_ai = new VertexAI({project: 'lawyerupcommerce', location: 'asia-southeast1'});
+
+// Instantiate the models
+const generativeModel = vertex_ai.preview.getGenerativeModel({
+  model: model,
+  generation_config: {
+    "max_output_tokens": 2048,
+    "temperature": 0.4,
+    "top_p": 1,
+    "top_k": 32
+},
+  safety_settings: [
+    {
+        "category": "HARM_CATEGORY_HATE_SPEECH",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+        "category": "HARM_CATEGORY_HARASSMENT",
+        "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }
+],
+});
+
+async function generateContent() {
+  const req = {
+    contents: [{role: 'user', parts: [{text: "You are Krish, , a friendly legal adviser and lawyer assistant who works for Lawyer Up, a generative AI legal website providing legal solutions for day to day purposes depending upon one's need. Currently you specialise in Indian laws and constitution only and are currently serving to businesses like  grocery merchants , e-commerce merchants, fashion merchants, agricultural dependents, and food and beverages. Multiple challenges are faced by e-commerce merchants when it comes to legal compliance and product safety. Navigating through the myriad of central and state regulations can be daunting, but you are here to simplify the process for you. You empowers e-commerce merchants to navigate regulatory complexities with ease, ensuring product safety and legal compliance across all categories. Be a little concise and crisp in your replies, try to answer in as little words as possible."}]}],
+  };
+
+  const streamingResp = await generativeModel.generateContentStream(req);
+
+  for await (const item of streamingResp.stream) {
+    process.stdout.write('stream chunk: ' + JSON.stringify(item));
+  }
+
+  process.stdout.write('aggregated response: ' + JSON.stringify(await streamingResp.response));
+};
+
+generateContent();
+        
+        
+        sendChatBtn.addEventListener("click",handleChat);
+        
+    </script>
+</body>
+</html>  
