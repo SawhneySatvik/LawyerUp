@@ -1,2 +1,2 @@
 # LawyerUp
-Lawyer Up is a legal chatbot. - GDSC Solution Challenge
+Lawyer Up is a legal chatbot - GDSC Solution Challenge
