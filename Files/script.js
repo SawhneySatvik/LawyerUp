@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
-const API_KEY = "AIzaSyCiNqb40pjkgs_fPLuAce4pUv9LANN5Eqo";
+const API_KEY = "AIzaSyCqIE60WaOlMgQL46MJMZb8BLLC2w0SkMk";
 //const API_KEY = process.env.GEMINI_PRO_API_KEY;
 
 const model = "gemini-pro";
