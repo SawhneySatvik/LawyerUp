@@ -1,11 +1,7 @@
 # LawyerUp
 Lawyer Up is a legal chatbot - GDSC Solution Challenge
 
-# LawyerUp - Commerce
-ONDC Hackathon: Build for Bharat
-
-
-Problem Statement Category: Scalable Solution
+##Problem Statement Category: Scalable Solution
 Problem Statement: Legal Compliance and Product Safety
 
 
