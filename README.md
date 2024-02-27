@@ -40,7 +40,7 @@ Test cases & data (as applicable) against which the eval criteria can be assesse
 Demonstrate working of the solution to the evaluation team
 
 
-• Begin by introducing the purpose of the solution, which is to provide legal assistance in the retail commerce sectors such as Agriculture, F&B, Electronics, Grocery, and Fashion.
+• Begin by introducing the purpose of the solution, which is to provide legal assistance.
 • Initiate the chatbot interaction. The chatbot engages with the user's queries by providing accurate and relevant legal information.
 • User experience aspects such as ease of interaction, speed of response, and accessibility across different devices and platforms.
 
