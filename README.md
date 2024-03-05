@@ -25,7 +25,7 @@ Tech evaluation would include the following
 Define customization & deployment options of your proposed solution.
 
 
-• Domain specific knowledge enhancement: Tailoring Lawyer Up with the knowledge base to include specific legal relations, requirements, and best practices relevant to each domain (Agriculture, F&B, Grocery, Electronics, Fashion). This evolves deepening the understanding of the legal intricacies within each industry to provide accurate and relevant answers.
+• Domain specific knowledge enhancement: Tailoring Lawyer Up with the knowledge base to include specific legal relations, requirements, and best practices relevant to each domain. This evolves deepening the understanding of the legal intricacies within each industry to provide accurate and relevant answers.
 • Web Based Deployment: We have hosted Lawyer Up on a website where we have used HTML, CSS and JavaScript. We have deployed the website on Github. We trained our chatbot on Google AI Studio on Google Cloud.
 
 
