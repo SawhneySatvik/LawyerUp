@@ -46,7 +46,8 @@ Demonstrate working of the solution to the evaluation team
 
 
 Team Name: Resilience
-Team Leader Name: Satvik Sawhney (2nd year B.Tech student) Team Member Names: Ishita Goel (2nd year B.Tech student)
+Team Leader Name: Satvik Sawhney (2nd year B.Tech student) 
+Team Member Names: Ishita Goel (2nd year B.Tech student)
 
 
 Important Links:-
