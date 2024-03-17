@@ -11,7 +11,7 @@ Modular architecture that provides flexible integration options
 • We created and trained a google chatbot which provides legal advice and integrated it into our website which we hosted using Github.
 
 
-Tech evaluation would include the following
+Tech evaluation includes the following
 
 
 • Google Generative AI SDK
