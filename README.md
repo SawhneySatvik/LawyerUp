@@ -1,58 +1,28 @@
-# LawyerUp
-Lawyer Up is a legal chatbot
+**Lawyer Up: Legal Chatbot**
 
+**Introduction**
 
-Architecture & Design for the innovative solution.
+Lawyer Up is a state-of-the-art legal chatbot designed to provide users with accurate and relevant legal advice. This README provides an overview of the architecture, design, customization options, deployment methods, test cases, and demonstrates the working of the solution.
 
-Modular architecture that provides flexible integration options
+**Architecture & Design**
 
+Lawyer Up features a modular architecture that supports flexible integration options:
 
-• Our project is a responsive website which works both on laptops and phone. We made it using HTML, CSS and JavaScript.
-• We created and trained a google chatbot which provides legal advice and integrated it into our website which we hosted using Github.
+- Responsive Website: Developed using HTML, CSS, and JavaScript, ensuring compatibility with laptops and mobile devices.
+- Google Chatbot Integration: Trained on Google AI Studio and hosted on a website deployed via Github Pages.
+- Advanced AI Capabilities: Leveraging the Google Generative AI SDK and Gemini Pro model for enhanced conversational capabilities.
+- Additional APIs: Integration of Google Fonts and Google Icons for improved user experience.
 
+**Customization & Deployment Options**
 
-Tech evaluation is as follows:
+- Domain Specific Knowledge Enhancement: Customize Lawyer Up to include domain-specific legal knowledge, tailoring responses to specific legal relations, requirements, and best practices within different industries.
+- Web-Based Deployment: Deploy Lawyer Up as a responsive website on Github Pages, allowing seamless access across various devices and platforms. Customize and update features using HTML, CSS, and JavaScript.
 
+**Test Cases & Data**
 
-• Google Generative AI SDK
-• Google AI Studio: Model was trained on Google AI Studio on Google Cloud
-• AI Model: Gemini Pro
-• Other APIs include: Google Fonts and Google Icons
-• Github Pages: Website host
+- Training Data: Gemini Pro model trained on a comprehensive dataset mounted on Google AI Studio on Google Cloud, ensuring proficiency in providing accurate legal advice.
+- Chat Prompt Method: Conversational chat model trained using the Chat Prompt method, with extensive research and data collection to enhance conversational capabilities.
 
+**Conclusion**
 
-
-Define customization & deployment options of your proposed solution.
-
-
-• Domain specific knowledge enhancement: Tailoring Lawyer Up with the knowledge base to include specific legal relations, requirements, and best practices relevant to each domain. This evolves deepening the understanding of the legal intricacies within each industry to provide accurate and relevant answers.
-• Web Based Deployment: We have hosted Lawyer Up on a website where we have used HTML, CSS and JavaScript. We have deployed the website on Github. We trained our chatbot on Google AI Studio on Google Cloud.
-
-
-Test cases & data (as applicable) against which the eval criteria can be assessed
-
-
-• We trained our multi-turn conversational chat model on Google AI Studio and integrated it in our website using JavaScript referencing Gemini AI Docs.
-• The AI Model used was Gemini Pro which we trained using a vast dataset which we mounted on our Google AI Studio on Google Cloud using Drive.
-• We used Chat Prompt method to train the conversational chat model which we researched and collected data ourselves.
-
-
-Demonstrate working of the solution to the evaluation team
-
-
-• Begin by introducing the purpose of the solution, which is to provide legal assistance.
-• Initiate the chatbot interaction. The chatbot engages with the user's queries by providing accurate and relevant legal information.
-• User experience aspects such as ease of interaction, speed of response, and accessibility across different devices and platforms.
-
-
-Team Name: Resilience
-Team Leader Name: Satvik Sawhney (2nd year B.Tech student) 
-Team Member Names: Ishita Goel (2nd year B.Tech student)
-
-
-Important Links:-
-
-● GitHub Public Repository Link - https://github.com/SawhneySatvik/LawyerUp
-
-● Link to test cases and data files – https://sawhneysatvik.github.io/LawyerUp/Files
-
+Lawyer Up represents an innovative solution for accessing legal advice. With its modular architecture, customizable features, and flexible deployment options, Lawyer Up offers users convenient access to accurate and relevant legal information.
